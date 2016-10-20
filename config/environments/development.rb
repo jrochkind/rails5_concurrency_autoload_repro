@@ -4,10 +4,17 @@ Rails.application.configure do
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
-  config.cache_classes = false
+  # false in default generated app
+  config.cache_classes = (ENV['CONF_CACHE_CLASSES'] == "true")
 
   # Do not eager load code on boot.
-  config.eager_load = false
+  # false in default generated app
+  config.eager_load = (ENV['CONF_EAGER_LOAD'] == "true")
+
+  # This one isn't normally there at all in generated app
+  if ENV['CONF_AUTO_LOAD']
+    config.auto_load = (ENV['CONF_AUTO_LOAD'] == "true")
+  end
 
   # Show full error reports.
   config.consider_all_requests_local = true
