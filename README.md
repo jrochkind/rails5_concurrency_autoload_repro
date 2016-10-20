@@ -4,7 +4,7 @@ a Rails action. The rails generation was with
 `--skip-active-record --skip-turbolinks --skip-spring`.
 
 This README explains the use case, findings for various Rails config
-settings (some fail disastrously), and questions/requests for Rails issue.
+settings (some fail disastrously), and questions/requests for this [reported Rails issue](https://github.com/rails/rails/issues/26847).
 
 --------------
 
